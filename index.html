@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="za.tortikom42 — домашние торты на заказ. Авторские торты, капкейки, чизкейки, макаруны ручной работы. Кемерово. Доставка.">
+<meta name="theme-color" content="#0E0A14">
+<title>za.tortikom42 — домашние торты на заказ</title>
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
 /* ============================================================
    ZA.TORTIKOM42 — CSS (объединённый)
    Все стили проекта + новые функции (адаптив, анимации, документы, админка)
@@ -2054,20 +2074,12 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 .help-footer-note__actions { display: flex; gap: var(--s-3); justify-content: center; flex-wrap: wrap; }
 /* ============================================================
    АДАПТИВ — ПУБЛИЧНЫЙ САЙТ (mobile-first приоритет)
-   На телефоне всё — главное, на десктопе — красиво и просторно
    ============================================================ */
 
 /* Телефоны до 480px — основной опыт */
 @media (max-width: 480px) {
-  :root {
-    --header-h: 60px;
-    --s-12: 32px;
-    --s-16: 40px;
-  }
-
+  :root { --header-h: 60px; --s-12: 32px; --s-16: 40px; }
   .container { padding: 0 var(--s-4); }
-
-  /* Хедер */
   .header-inner { padding: 10px var(--s-4); gap: var(--s-2); }
   .logo-text-block b { font-size: 18px; }
   .logo-text-block small { font-size: 11px; }
@@ -2076,27 +2088,10 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .header-burger { width: 38px; height: 38px; font-size: 15px; }
   .header-auth-btn { padding: 8px 12px; font-size: 12.5px; }
   .header-auth-btn span:not(.avatar) { display: none; }
-
-  /* Мобильная навигация */
-  .main-nav {
-    display: none;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--bg-deep);
-    border-bottom: 1px solid var(--line-1);
-    flex-direction: column;
-    padding: var(--s-3);
-    gap: 2px;
-    align-items: stretch;
-    max-height: calc(100vh - var(--header-h));
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0,0,0,.5);
-    z-index: 200;
-  }
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-deep); border-bottom: 1px solid var(--line-1); flex-direction: column; padding: var(--s-3); gap: 2px; align-items: stretch; max-height: calc(100vh - var(--header-h)); overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.5); z-index: 200; }
   .main-nav.open { display: flex; animation: fadeInDown .3s ease; }
   .nav-link { text-align: center; padding: 14px; font-size: 15px; border-radius: var(--r-md); }
   .nav-link.active::after { display: none; }
-
-  /* Hero */
   .hero { grid-template-columns: 1fr; gap: var(--s-6); padding: var(--s-6) 0 var(--s-10); text-align: center; }
   .hero-badge { margin-left: auto; margin-right: auto; font-size: 11px; padding: 6px 14px; }
   .hero-title { font-size: clamp(28px, 8vw, 40px); }
@@ -2116,17 +2111,11 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .hero-float-badge.badge-1 { top: 5%; right: 0; }
   .hero-float-badge.badge-2 { bottom: 8%; left: 0; }
   .hero-float-badge.badge-3 { top: 45%; left: 0; display: none; }
-
-  /* Секции */
   .section { margin-bottom: var(--s-10); }
   .section-head { gap: var(--s-3); margin-bottom: var(--s-5); }
   .section-title { font-size: 24px; }
   .section-link { font-size: 13px; }
-
-  /* Каталог / посты / торты — в одну колонку */
   .feed-grid, .cakes-grid, .catalog-grid, .home-feed, .home-cakes { grid-template-columns: 1fr; gap: var(--s-4); }
-
-  /* Карточка торта на мобиле — горизонтальная */
   .cake-card { flex-direction: row; }
   .cake-card__photo { width: 110px; min-width: 110px; aspect-ratio: 1; }
   .cake-card__emoji { font-size: 48px; }
@@ -2138,8 +2127,6 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .cake-card__price-value { font-size: 18px; }
   .cake-card__order-btn { justify-content: center; padding: 8px 12px; }
   .cake-card__order-btn span { display: inline; }
-
-  /* Пост-карточка — тоже горизонтальная на мобиле */
   .post-card { flex-direction: row; }
   .post-card__cover { width: 110px; min-width: 110px; aspect-ratio: 1; }
   .post-card__cover-emoji { font-size: 44px; }
@@ -2150,32 +2137,22 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .post-card__read { font-size: 11.5px; }
   .reactions-mini { gap: 3px; }
   .reaction-mini { width: 26px; height: 26px; font-size: 12px; }
-
-  /* CTA */
   .home-cta { padding: var(--s-8) var(--s-5); border-radius: var(--r-lg); }
   .home-cta h2 { font-size: 22px; }
   .home-cta p { font-size: 14px; }
   .home-cta-actions { flex-direction: column; }
   .home-cta-actions .btn { width: 100%; }
-
-  /* Фичи */
   .home-features { grid-template-columns: 1fr; gap: var(--s-3); }
   .feature-card { padding: var(--s-5) var(--s-4); }
   .feature-icon { width: 44px; height: 44px; font-size: 18px; margin-bottom: var(--s-3); }
-
-  /* Каталог */
   .catalog-toolbar { padding: var(--s-4); border-radius: var(--r-md); }
   .catalog-chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; margin: 0 calc(-1 * var(--s-4)); padding-left: var(--s-4); padding-right: var(--s-4); scrollbar-width: none; }
   .catalog-chips::-webkit-scrollbar { display: none; }
-
-  /* Форма заказа */
   .order-panel { padding: var(--s-5) var(--s-4); border-radius: var(--r-lg); }
   .order-type-grid { grid-template-columns: 1fr; gap: var(--s-3); }
   .order-type-card { padding: var(--s-5) var(--s-4); }
   .order-form-grid { grid-template-columns: 1fr; gap: var(--s-3); }
   .order-pick-grid { grid-template-columns: 1fr; }
-
-  /* Кабинет */
   .profile-hero { grid-template-columns: 1fr; gap: var(--s-4); padding: var(--s-5) var(--s-4); text-align: center; border-radius: var(--r-xl); }
   .profile-avatar-wrap { justify-self: center; }
   .profile-avatar { width: 88px; height: 88px; font-size: 32px; }
@@ -2188,25 +2165,17 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .sugar-card__value { font-size: 22px; }
   .sugar-card__icon { width: 34px; height: 34px; font-size: 15px; margin-bottom: var(--s-2); }
   .sugar-card__label { font-size: 10px; }
-
-  /* Дневник вкуса — упрощаем на мобиле */
   .diary::before { display: none; }
   .diary { padding: var(--s-5) var(--s-4); border-radius: var(--r-lg); }
   .diary-entry, .diary-entry:nth-child(even), .diary-entry:nth-child(odd) { grid-template-columns: 40px 1fr; gap: var(--s-2); }
   .diary-entry .diary-entry__dot { grid-column: 1; width: 40px; height: 40px; font-size: 16px; }
   .diary-entry .diary-entry__card { grid-column: 2; padding: var(--s-3) var(--s-4); }
   .diary-entry__title { font-size: 15px; }
-
-  /* Настройки — табы в скролл */
   .settings-tabs { padding: 3px; overflow-x: auto; }
   .settings-tab { padding: 9px 14px; font-size: 12px; flex: 0 0 auto; min-width: max-content; }
   .settings-tab i { font-size: 11px; }
-
-  /* Мои заказы */
   .my-orders-list { grid-template-columns: 1fr; gap: var(--s-3); }
   .my-order { padding: var(--s-4); }
-
-  /* Контакты */
   .contacts-layout { grid-template-columns: 1fr; gap: var(--s-5); }
   .contacts-instruction { position: static; padding: var(--s-5) var(--s-4); border-radius: var(--r-lg); }
   .messengers-grid { grid-template-columns: 1fr; gap: var(--s-2); }
@@ -2219,37 +2188,23 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .contact-row__value { font-size: 14px; }
   .work-info { padding: var(--s-5) var(--s-4); border-radius: var(--r-lg); }
   .work-info__list { grid-template-columns: 1fr; gap: var(--s-2); }
-
-  /* Футер */
   .site-footer { padding: var(--s-8) 0 var(--s-4); margin-top: var(--s-10); }
   .footer-grid { grid-template-columns: 1fr; gap: var(--s-5); margin-bottom: var(--s-6); }
   .footer-legal-block { padding: var(--s-4); gap: var(--s-3); }
   .footer-legal-block__rows { grid-template-columns: 1fr; gap: var(--s-2); }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: var(--s-3); }
   .footer-legal-links { width: 100%; }
-
-  /* FAB и to-top на мобиле */
   .fab { bottom: 80px; right: 16px; padding: 13px 18px; font-size: 14px; }
   .fab .fab-text { display: none; }
   .to-top { right: 16px; bottom: 16px; width: 42px; height: 42px; }
-
-  /* Cookie-баннер */
   .cookie-banner { left: var(--s-3); right: var(--s-3); bottom: var(--s-3); transform: none; width: auto; max-width: none; padding: var(--s-4); border-radius: var(--r-lg); flex-direction: column; gap: var(--s-3); }
   .cookie-banner__icon { width: 44px; height: 44px; font-size: 20px; }
   .cookie-banner__title { font-size: 15px; }
   .cookie-banner__text { font-size: 12.5px; }
   .cookie-banner__actions { flex-direction: column; width: 100%; }
   .cookie-banner__btn { width: 100%; justify-content: center; }
-
-  /* Модалки — на мобиле снизу, в стиле bottom-sheet */
   .modal-overlay { padding: 0; align-items: flex-end; }
-  .modal {
-    max-width: 100%;
-    max-height: 92vh;
-    border-radius: var(--r-xl) var(--r-xl) 0 0;
-    padding: var(--s-6) var(--s-4) var(--s-5);
-    animation: slideInBottom .4s cubic-bezier(0.22,1,0.36,1) both;
-  }
+  .modal { max-width: 100%; max-height: 92vh; border-radius: var(--r-xl) var(--r-xl) 0 0; padding: var(--s-6) var(--s-4) var(--s-5); animation: slideInBottom .4s cubic-bezier(0.22,1,0.36,1) both; }
   .modal__title { font-size: 20px; padding-right: 40px; }
   .modal__sub { padding-right: 40px; }
   .modal-close { top: 12px; right: 12px; width: 34px; height: 34px; font-size: 14px; }
@@ -2257,8 +2212,6 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .modal__actions .btn { min-width: 0; flex: 1 1 auto; }
   .confirm-modal__icon { width: 56px; height: 56px; font-size: 24px; }
   .confirm-modal__title { font-size: 19px; }
-
-  /* Юридические модалки на мобиле */
   .legal-modal__header { padding: var(--s-5) var(--s-4) var(--s-4); }
   .legal-modal__title { font-size: 22px; padding-right: 40px; }
   .legal-modal__body { padding: var(--s-5) var(--s-4) var(--s-8); }
@@ -2272,8 +2225,6 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .legal-callout { padding: var(--s-4); font-size: 13px; }
   .legal-table { font-size: 12.5px; }
   .legal-table th, .legal-table td { padding: var(--s-2) var(--s-3); }
-
-  /* Пост-модалка на мобиле */
   .post-view__hero-emoji { font-size: 84px; }
   .post-view__headline { left: 20px; right: 20px; bottom: 16px; }
   .post-view__content { padding: var(--s-5) var(--s-4) var(--s-6); }
@@ -2281,11 +2232,7 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .reactions-list { gap: var(--s-2); }
   .reaction-btn { padding: 8px 12px; font-size: 13px; }
   .reaction-btn__emoji { font-size: 18px; }
-
-  /* Toast на мобиле */
   .toast-container { top: auto; bottom: var(--s-4); right: var(--s-3); left: var(--s-3); width: auto; max-width: none; gap: var(--s-2); }
-
-  /* Страницы */
   .page { padding-top: var(--s-4); }
 }
 
@@ -2296,14 +2243,12 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .main-nav.open { display: flex; }
   .nav-link { text-align: center; padding: 14px; font-size: 15px; }
   .header-burger { display: flex; }
-
   .hero { grid-template-columns: 1fr; gap: var(--s-8); padding: var(--s-8) 0 var(--s-12); text-align: center; }
   .hero-badge { margin-left: auto; margin-right: auto; }
   .hero-desc { margin-left: auto; margin-right: auto; }
   .hero-actions { justify-content: center; }
   .hero-stats { margin-left: auto; margin-right: auto; }
   .hero-visual { min-height: 400px; }
-
   .feed-grid { grid-template-columns: 1fr 1fr; }
   .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
   .home-features { grid-template-columns: 1fr 1fr; }
@@ -2319,21 +2264,7 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 /* Показываем бургер до 960 */
 @media (max-width: 960px) {
   .header-burger { display: flex; }
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: var(--bg-deep);
-    border-bottom: 1px solid var(--line-1);
-    flex-direction: column;
-    padding: var(--s-3);
-    gap: 2px;
-    align-items: stretch;
-    max-height: calc(100vh - var(--header-h));
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0,0,0,.5);
-    z-index: 200;
-  }
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-deep); border-bottom: 1px solid var(--line-1); flex-direction: column; padding: var(--s-3); gap: 2px; align-items: stretch; max-height: calc(100vh - var(--header-h)); overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.5); z-index: 200; }
   .main-nav.open { display: flex; animation: fadeInDown .3s ease; }
   .nav-link { text-align: center; padding: 14px; font-size: 15px; border-radius: var(--r-md); }
   .nav-link.active::after { display: none; }
@@ -2355,21 +2286,12 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 
 /* ============================================================
    АДАПТИВ — АДМИНКА (desktop-first приоритет)
-   На большом экране — максимум функций. На мобиле — тоже работает
    ============================================================ */
 
 /* Планшет и меньше — админка сворачивает сайдбар */
 @media (max-width: 1024px) {
   .admin-layout { grid-template-columns: 1fr; }
-  .admin-sidebar {
-    position: fixed;
-    top: 0; left: 0;
-    width: 260px;
-    z-index: 300;
-    transform: translateX(-100%);
-    transition: transform var(--t-mid);
-    box-shadow: 12px 0 40px rgba(0,0,0,.5);
-  }
+  .admin-sidebar { position: fixed; top: 0; left: 0; width: 260px; z-index: 300; transform: translateX(-100%); transition: transform var(--t-mid); box-shadow: 12px 0 40px rgba(0,0,0,.5); }
   .admin-sidebar.open { transform: translateX(0); }
   .admin-burger { display: flex; }
   .admin-topbar { padding: var(--s-4); }
@@ -2380,18 +2302,14 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 @media (max-width: 900px) {
   .cal-layout { grid-template-columns: 1fr; }
   .cal-side { position: static; max-height: none; }
-
   .order-detail-info { grid-template-columns: 1fr; }
   .order-moderate { grid-template-columns: 1fr; }
-
   .admin-orders-summary { grid-template-columns: 1fr 1fr; gap: var(--s-2); }
   .admin-orders-summary__item { padding: var(--s-3); }
   .admin-orders-summary__value { font-size: 18px; }
-
   .admin-clients-summary { grid-template-columns: 1fr 1fr; gap: var(--s-2); }
   .admin-clients-summary__item { padding: var(--s-3); }
   .admin-clients-summary__value { font-size: 18px; }
-
   .help-action-grid { grid-template-columns: 1fr; }
 }
 
@@ -2406,13 +2324,11 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .admin-topbar__actions { width: 100%; }
   .admin-topbar__actions .admin-btn { flex: 1; justify-content: center; }
   .admin-burger { width: 38px; height: 38px; font-size: 14px; }
-
   .admin-kpi-grid { grid-template-columns: 1fr 1fr; gap: var(--s-2); }
   .admin-kpi { padding: var(--s-3); }
   .admin-kpi__value { font-size: 22px; }
   .admin-kpi__icon { width: 32px; height: 32px; font-size: 14px; margin-bottom: var(--s-2); }
   .admin-kpi__label { font-size: 10px; }
-
   .admin-orders-summary { grid-template-columns: 1fr 1fr; }
   .admin-orders-toolbar { padding: var(--s-3); gap: var(--s-2); }
   .admin-orders-toolbar__search { min-width: 100%; }
@@ -2423,17 +2339,14 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .admin-orders-table td { padding: 6px 0; border: none; }
   .admin-orders-table td:first-child { font-size: 15px; font-weight: 800; color: var(--gold); border-bottom: 1px solid var(--line-1); padding-bottom: 8px; margin-bottom: 6px; }
   .admin-actions-cell { justify-content: flex-end; }
-
   .admin-clients-table { min-width: 100%; }
   .admin-clients-table thead { display: none; }
   .admin-clients-table, .admin-clients-table tbody, .admin-clients-table tr, .admin-clients-table td { display: block; width: 100%; }
   .admin-clients-table tr { margin-bottom: var(--s-3); border: 1px solid var(--line-1); border-radius: var(--r-md); padding: var(--s-3); background: var(--bg-card); }
   .admin-clients-table td { padding: 6px 0; border: none; }
-
   .admin-chart-bars { height: 120px; }
   .admin-chart-bar__value { font-size: 9px; }
   .admin-chart-bar__label { font-size: 9px; }
-
   .cal-shell { padding: var(--s-3); border-radius: var(--r-md); }
   .cal-title__month { font-size: 18px; }
   .cal-nav__btn { width: 34px; height: 34px; font-size: 12px; }
@@ -2450,11 +2363,9 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   .cal-event__meta { display: none; }
   .cal-day__more { font-size: 9px; }
   .cal-day__note { display: none; }
-
   .ban-durations { grid-template-columns: 1fr 1fr; }
   .ban-modal__actions { flex-direction: column; }
   .ban-modal__actions .admin-btn { width: 100%; }
-
   .help-hero { padding: var(--s-6) var(--s-4); border-radius: var(--r-lg); }
   .help-hero__icon { width: 58px; height: 58px; font-size: 24px; }
   .help-hero__title { font-size: 22px; }
@@ -2516,6 +2427,10 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
   body { background: #fff; color: #000; }
   .no-print, .site-header, .site-footer, .fab, .to-top, .cookie-banner, .toast-container { display: none !important; }
 }
+</style>
+</head>
+<body>
+
 <!-- ============================================================
      ЗАГРУЗОЧНЫЙ ЭКРАН
      ============================================================ -->
@@ -2981,13 +2896,7 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
      ============================================================ -->
 <div class="toast-container" id="toastContainer"></div>
 
-<!-- ============================================================
-     МОДАЛКИ (создаются динамически через JS, но их контейнеры здесь)
-     ============================================================ -->
-<!-- Модалка профиля клиента, заказа, бана, cookie-инфо, документов,
-     ручного создания заказа, редактирования торта и т.д. —
-     все они создаются в js через Modal.show() динамически. -->
-                                                                        <script>
+<script>
 /* ============================================================
    ZA.TORTIKOM42 — JavaScript (объединённый)
    Все модули + новые функции админки
@@ -3588,6 +3497,8 @@ const Data = {
     Object.values(LS_KEYS).forEach(k => Store.remove(k));
     this.init();
   },
+  exportAll() { return Store.exportAll(); },
+  importAll(dump) { return Store.importAll(dump); },
 };
 window.Data = Data;
 
@@ -3595,7 +3506,8 @@ console.log(
   '%c🍰 za.tortikom42 JS загружается...',
   'color: #E8B96E; font-size: 14px; font-weight: bold;'
 );
-                                                                           /* ============================================================
+
+/* ============================================================
    7. MODAL.JS — Управление модалками
    ============================================================ */
 const Modal = {
@@ -4353,7 +4265,8 @@ const AuthModal = {
 window.AuthModal = AuthModal;
 
 console.log('%c✅ Модули 1-11 (Config, Storage, Utils, Toast, Theme, Data, Modal, Boot, Router, Auth, AuthModal) загружены', 'color: #86C68B; font-size: 12px;');
-                                                                           /* ============================================================
+
+/* ============================================================
    12. HOME PAGE.JS — Главная
    ============================================================ */
 const HomePage = {
@@ -5709,7 +5622,8 @@ const CookieConsent = {
 window.CookieConsent = CookieConsent;
 
 console.log('%c✅ Модули 12-20 (страницы сайта + CookieConsent) загружены', 'color: #86C68B; font-size: 12px;');
-                                                                           /* ============================================================
+
+/* ============================================================
    21. LEGAL DOCS.JS — Юридические документы в красивом окне
    ============================================================ */
 const LegalDocs = {
@@ -7357,7 +7271,8 @@ const AdminCalendar = {
 window.AdminCalendar = AdminCalendar;
 
 console.log('%c✅ Модули 21-26 (LegalDocs + AdminAuth + AdminDashboard + AdminOrders + AdminBulkActions + AdminCalendar) загружены', 'color: #86C68B; font-size: 12px;');
-                                                                           /* ============================================================
+
+/* ============================================================
    27. ADMIN CLIENTS.JS — Клиенты + баны
    ============================================================ */
 const AdminClients = {
